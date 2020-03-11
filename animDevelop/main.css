@@ -1,0 +1,47 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: #111;
+}
+.reveal {
+    position: relative;
+    width: 550px;
+    height: 150px;
+    text-align: center;
+    line-height: 150px;
+    font-size: 60px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+.reveal span {
+    color: #111;
+    letter-spacing: 10px;
+    mix-blend-mode: darken;
+}
+.reveal:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    width: 150px;
+    height: 150px;
+    background: #fff;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    box-shadow: inset 0px 0px 10px 10px #888;
+    animation: reveal 4s ease-in-out infinite;
+}
+
+@keyframes reveal {
+    0%, 100% {
+        left: 0px;
+    }
+    50% {
+        left:calc(100% - 150px);
+    }
+}
